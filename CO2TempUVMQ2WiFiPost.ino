@@ -37,9 +37,9 @@ float mq2ratio;                       // Store mq2 - MQ2 Sensor
 WiFly wifly;                          //WIFI
 String data;                          //WIFI
 
-const char mySSID[] = "dlinkit";
-const char myPassword[] = "8c5195bf3bbece21ae3119aae6";
-const char site[] = "santiapps.com";
+const char mySSID[] = "mywifi";
+const char myPassword[] = "mykey";
+const char site[] = "myserver.com";
 
 void terminal();
 
@@ -160,7 +160,7 @@ void reportToCloud() {
     
         /* Send the request */
   wifly.println("POST /arduino/data_post.php HTTP/1.0");
-  wifly.println("Host: www.santiapps.com"); // SERVER ADDRESS HERE TOO
+  wifly.println("Host: www.myserver.com"); // SERVER ADDRESS HERE TOO
         wifly.println("Content-Type: application/x-www-form-urlencoded" );
         wifly.print("Content-Length: ");
         wifly.println(data.length());
